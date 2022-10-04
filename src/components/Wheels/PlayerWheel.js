@@ -1,5 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import WheelContext from "../../store/wheel-context";
+import Wheel from "../UI/Wheel";
+import classes from "./PlayerWheel.module.css";
 
 export default function PlayerWheel(props) {
   const playerCtx = useContext(WheelContext);
@@ -27,15 +29,24 @@ export default function PlayerWheel(props) {
     if (playerCtx.playerIndex === 4) {
       playerCtx.setPlayerIndex(0);
     }
-
-    playerCtx.score();
   }
 
   return (
-    <div>
-      <button onClick={decHandler}>-</button>
-      <p>{mode.name}</p>
-      <button onClick={incHandler}>+</button>
-    </div>
+    <Wheel>
+      <button
+        onClick={decHandler}
+        className={`${classes.btn} ${classes.incBtn}`}
+      >
+        -
+      </button>
+      <img src={mode.logo} className={classes.images} />
+      <p className={classes.content}>{mode.name}</p>
+      <button
+        onClick={incHandler}
+        className={`${classes.btn} ${classes.decBtn}`}
+      >
+        +
+      </button>
+    </Wheel>
   );
 }

@@ -1,0 +1,36 @@
+.scoreboard {
+    width: fit-content;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.scores {
+    display: flex;
+    border: 1px solid black;
+    padding: 10px;
+    height: fit-content;
+
+}
+
+.scores div {
+    border: 1px solid black;
+}
+
+.playerscore {
+    height: fit-content;
+    padding: 10px;
+
+}
+.compscore {
+    height: fit-content;
+    padding: 10px;
+
+}
+
+.scorenum {
+    display: flex;
+}
+
+.scorenum div {
+    padding: 10px;
+}

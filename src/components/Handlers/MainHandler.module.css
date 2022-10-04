@@ -1,0 +1,36 @@
+.mainhandler {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.btn {
+  background: #5E5DF0;
+  border-radius: 999px;
+  box-shadow: #5E5DF0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  margin: 50px 0 0 0;
+  width: 10rem;
+  border: 0;
+  transition: 0.3s ease-out;
+}
+
+.popup {
+  background-color: #5E5DF0;
+  color: aliceblue;
+  padding: 0.5rem 2rem;
+  font-family: Inter, sans-serif;
+  border-radius: 3px;
+  box-shadow: #939393 0 10px 20px -10px;
+  position: relative;
+  top: -18vh;
+}

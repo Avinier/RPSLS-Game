@@ -1,8 +1,10 @@
-import { Fragment, useContext } from "react";
+import { useContext } from "react";
 import WheelContext from "../../store/wheel-context";
 import Modal from "../UI/Modal";
 
-export default function PlayerModal() {
+import { motion } from "framer-motion";
+
+export default function PlayerModal(props) {
   const playerModalCtx = useContext(WheelContext);
 
   function closePlayerModal() {
@@ -10,12 +12,20 @@ export default function PlayerModal() {
       ...scoreData,
       playerWon: false,
     }));
+    props.clickHandler();
   }
 
   return (
     <Modal>
       <h1>PLAYER WINS!</h1>
-      <button onClick={closePlayerModal}>ok</button>
+      <motion.button
+        whileHover={{ scale: 1.2 }}
+        transition={{ type: "spring", stiffness: 500, damping: 5 }}
+        whileTap={{ scale: 0.9 }}
+        onClick={closePlayerModal}
+      >
+        OK
+      </motion.button>
     </Modal>
   );
 }

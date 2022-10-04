@@ -2,7 +2,9 @@ import { Fragment, useContext } from "react";
 import WheelContext from "../../store/wheel-context";
 import Modal from "../UI/Modal";
 
-export default function CompModal() {
+import { motion } from "framer-motion";
+
+export default function CompModal(props) {
   const compModalCtx = useContext(WheelContext);
 
   function closeCompModal() {
@@ -10,12 +12,20 @@ export default function CompModal() {
       ...scoreData,
       compWon: false,
     }));
+    props.clickHandler();
   }
 
   return (
     <Modal>
       <h1>COMPUTER WINS</h1>
-      <button onClick={closeCompModal}>ok</button>
+      <motion.button
+        whileHover={{ scale: 1.2 }}
+        transition={{ type: "spring", stiffness: 500, damping: 5 }}
+        whileTap={{ scale: 0.9 }}
+        onClick={closeCompModal}
+      >
+        OK
+      </motion.button>
     </Modal>
   );
 }

@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+    color: bisque;
+}
+
+.app {
+    margin: 5rem 2.5rem;
+}
+
+.body {
+    display: flex;
+    justify-content: space-evenly;
+}

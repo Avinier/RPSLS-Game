@@ -1,0 +1,11 @@
+.wheel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    clip-path: circle(50% at 50% 50%);
+    background-color: rgb(166, 135, 252);
+
+}

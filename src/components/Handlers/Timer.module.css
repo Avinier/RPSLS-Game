@@ -1,0 +1,18 @@
+.timerbody {
+    background-color: blueviolet;
+    font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",sans-serif;
+    color: aliceblue;
+    height: 110px;
+    width: 110px;
+    text-align: center;
+    clip-path: circle(50% at 50% 50%);
+}
+
+.timer {
+    position: relative;
+    top: 2.5rem;
+}
+
+.content {
+    margin: 2.5rem 0;
+}

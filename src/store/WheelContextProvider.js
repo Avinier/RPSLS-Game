@@ -11,7 +11,8 @@ export default function WheelContextProvider(props) {
     playerWon: false,
     compWon: false,
   });
-
+  const [winner, setWinner] = useState(false);
+  let winnerName = "";
   function scoreHandler() {
     if (compDataIndex === dataIndex) {
       console.log("Tie");
@@ -35,6 +36,16 @@ export default function WheelContextProvider(props) {
     }
     console.log("score recorded");
     setRounds(rounds + 1);
+
+    if (rounds === 9) {
+      setWinner(true);
+
+      if (scoreData.playerScore > scoreData.compScore) {
+        winnerName = "YOU!";
+      } else {
+        winnerName = "COMPUTER :(";
+      }
+    }
   }
 
   function checker() {
@@ -52,6 +63,8 @@ export default function WheelContextProvider(props) {
     scoreData: scoreData,
     score: scoreHandler,
     round: rounds,
+    finalWinner: winner,
+    winnerName: winnerName,
   };
 
   return (

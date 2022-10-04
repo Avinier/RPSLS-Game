@@ -10,6 +10,8 @@ const WheelContext = React.createContext({
   scoreData: {},
   score: () => {},
   round: 0,
+  finalWinner: undefined,
+  winnerName: "",
 });
 
 export default WheelContext;
