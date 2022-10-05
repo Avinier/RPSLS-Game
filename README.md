@@ -1,5 +1,6 @@
 A game inpsired from the rock-paper-scissor-lizard-spock game in the sitcom The Big Bang Theory (https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock)
 
+Stack- React (Javascript), Class based CSS, Framer Motion
 ## Work in Progress
 
 ### Porgress till now
