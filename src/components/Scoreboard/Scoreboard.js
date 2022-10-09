@@ -39,19 +39,32 @@ export default function Scoreboard() {
 
   return (
     <div className={classes.scoreboard}>
-      <motion.h3 variants={scorevariants} animate={animate ? "active" : ""}>
+      <motion.h3
+        variants={scorevariants}
+        animate={animate ? "active" : ""}
+        transition={{ delay: 1 }}
+        className={classes.rounds}
+      >
         Round {rounds} of 10
       </motion.h3>
 
-      <motion.div className={classes.scores}>
+      <motion.div
+        className={classes.scores}
+        whileHover={{
+          backgroundColor: "#FF8B6A",
+          boxShadow: "#f09a5d 0 10px 20px -10px",
+          scale: 1.1,
+        }}
+      >
         <motion.div className={classes.playerscore}>Player Score</motion.div>
         <motion.div
           variants={scorevariants}
           animate={animate ? "active" : ""}
+          transition={{ delay: 1 }}
           className={classes.scorenum}
         >
-          <motion.div>{playScore}</motion.div>
-          <motion.div>{compuScore}</motion.div>
+          <motion.div className={classes.playScore}>{playScore}</motion.div>
+          <motion.div className={classes.compuScore}>{compuScore}</motion.div>
         </motion.div>
 
         <motion.div className={classes.compscore}>Computer Score</motion.div>

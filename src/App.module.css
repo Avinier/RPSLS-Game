@@ -1,6 +1,23 @@
+body {
+  background-image: url(./assets/background-4.jpg);
+  background-size: cover;
+}
+
 h1 {
+    font-family: 'Title-2';
     text-align: center;
-    color: bisque;
+    color: aliceblue;
+    text-shadow: 0 0 20px #f9d5cc, 0 0 50px #e60073, 0 0 60px #e60073;
+    animation: glow 3s ease-out 1s infinite alternate;
+}
+
+h2 {
+    font-family: 'Title-2';
+    display: flex;
+    width: 65%;
+    margin: 0 auto;
+    justify-content: space-between;
+    color: blanchedalmond;
 }
 
 .app {
@@ -10,4 +27,14 @@ h1 {
 .body {
     display: flex;
     justify-content: space-evenly;
+}
+
+@keyframes glow {
+    from {
+    text-shadow: 0 0 20px #f9d5cc, 0 0 50px #e60073, 0 0 60px #e60073;
+    }
+    to {
+    text-shadow: 0 0 50px #e60073, 0 0 60px #e60073;
+
+    }
 }

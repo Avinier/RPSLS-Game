@@ -1,11 +1,23 @@
+.timerring {
+    background-color: #FF8B6A;
+    height: 120px;
+    width: 120px;
+    clip-path: circle(50% at 50% 50%);
+    position: relative;
+    box-shadow: #f09a5d 0 10px 20px -10px;
+}
+
 .timerbody {
-    background-color: blueviolet;
+    background-color: #5E5DF0;
     font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",sans-serif;
     color: aliceblue;
     height: 110px;
     width: 110px;
     text-align: center;
     clip-path: circle(50% at 50% 50%);
+    position: absolute;
+    left: 5px;
+    top: 5px;
 }
 
 .timer {
@@ -15,4 +27,11 @@
 
 .content {
     margin: 2.5rem 0;
+    font-size: large;
+    font-family: 'Title';
+}
+
+.secs { 
+    margin: 40px auto;
+    font-size: x-large;
 }

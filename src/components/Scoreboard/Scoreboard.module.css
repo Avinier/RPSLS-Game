@@ -2,35 +2,46 @@
     width: fit-content;
     margin: 50px auto;
     text-align: center;
+    font-family: 'Title';
+}
+.rounds {
+    color: aliceblue;
+    text-shadow: 0 0 20px #f9d5cc, 0 0 50px #e60073, 0 0 60px #e60073;
 }
 
 .scores {
     display: flex;
-    border: 1px solid black;
+    align-items: center;
+    border-radius: 10px;
     padding: 10px;
     height: fit-content;
-
+    background-color: #5E5DF0;
+    box-shadow: #5E5DF0 0 10px 20px -10px;
 }
 
-.scores div {
-    border: 1px solid black;
-}
 
 .playerscore {
     height: fit-content;
     padding: 10px;
-
+    border-radius: 5px 0 0 5px;
+    background-color: #f9d5cc;
 }
 .compscore {
     height: fit-content;
     padding: 10px;
+    border-radius: 0 5px 5px 0;
+    background-color: #f9d5cc;
 
 }
 
 .scorenum {
     display: flex;
+    background-color: #fda0c4;
+    border: 2.5px solid #FF8B6A;
+    border-radius: 5px;
 }
 
 .scorenum div {
     padding: 10px;
+    border: 2.5px solid #FF8B6A;
 }

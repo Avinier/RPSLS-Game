@@ -16,7 +16,7 @@ export default function PlayerModal(props) {
   }
 
   return (
-    <Modal>
+    <Modal bg={"#000000bf"}>
       <h1>PLAYER WINS!</h1>
       <motion.button
         whileHover={{ scale: 1.2 }}

@@ -4,15 +4,25 @@
 }
 
 .btn {
-    width: 40%;
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
-    background-color: pink;
-    border-radius: 10px;
+    background-color: transparent;
+    border-radius: 100%;
     border: 1px none white;
+    transition: 0.3s;
 }
 
+.btn:hover {
+    background-color: #f775a791;
+}
 .images {
     height: 150px;
     width: 150px;
     padding: 20px;
+}
+
+.btnimage {
+    width: 30px;
+    height: 30px;
 }

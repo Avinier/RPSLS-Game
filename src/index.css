@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "Title";
+  src: local("PublicPixel"), url('./fonts/PublicPixel-z84yD.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Content";
+  src: local("Robus"), url('./fonts/Robus-BWqOd.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "Title-2";
+  src: local("SportypoReguler"), url('./fonts/SportypoReguler-OVGwe.ttf') format("truetype");
+}

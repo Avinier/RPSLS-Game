@@ -16,7 +16,7 @@ export default function CompModal(props) {
   }
 
   return (
-    <Modal>
+    <Modal bg={"#000000bf"}>
       <h1>COMPUTER WINS</h1>
       <motion.button
         whileHover={{ scale: 1.2 }}

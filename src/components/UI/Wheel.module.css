@@ -3,9 +3,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 300px;
-    width: 300px;
-    clip-path: circle(50% at 50% 50%);
-    background-color: rgb(166, 135, 252);
+    height: 350px;
+    width: 350px;
+    font-family: 'Title';
+    background: radial-gradient(circle at 50% 0px, #ffffff96, rgba(255, 255, 255, 0) 60%);
+    transition: 0.3s ease-out;
+}
 
+.wheelouter {
+    clip-path: circle(50% at 50% 50%);
+    background-image: linear-gradient(to right top, #ffbc6e, #ffb173, #ffa67a, #ff9c82, #ff948b, #ff8f90, #ff8a96, #ff869d, #ff84a1, #ff81a5, #ff7faa, #ff7daf); 
 }

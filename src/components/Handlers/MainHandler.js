@@ -16,16 +16,18 @@ const variants = {
     damping: 25,
     stifness: 500,
   },
-  exit: { y: "100vh" },
+  leave: { y: "-100vh" },
 };
+
 function StartPopup() {
   return (
     <motion.div
+      key="startpop"
       className={classes.popup}
       variants={variants}
       initial="enter"
       animate="visible"
-      exit="exit"
+      leave="exit"
     >
       Start!
     </motion.div>
@@ -36,32 +38,34 @@ export default function MainHandler(props) {
   const [isStarted, setIsStarted] = useState(false);
   const handlerCtx = useContext(WheelContext);
 
-  function clickHandler() {
+  function mainClickHandler() {
     setIsStarted(true);
     handlerCtx.score();
   }
 
   return (
-    <AnimatePresence>
-      initial={false}
-      exitBeforeEnter={true}
-      <motion.div className={classes.mainhandler}>
-        {props.isTriggred && <StartPopup />}
-        <Timer />
-        <motion.button
-          whileHover={{
-            backgroundColor: "#f09a5d",
-            boxShadow: "#f09a5d 0 10px 20px -10px",
-            scale: 1.2,
-          }}
-          transition={{ type: "spring", stiffness: 500, damping: 5 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={clickHandler}
-          className={classes.btn}
-        >
-          {!isStarted ? `Start` : `Continue`}
-        </motion.button>
-      </motion.div>
-    </AnimatePresence>
+    <motion.div className={classes.mainhandler}>
+      {props.isTriggred && (
+        <AnimatePresence>
+          <StartPopup />
+        </AnimatePresence>
+      )}
+      <Timer />
+      <motion.button
+        whileHover={{
+          backgroundImage:
+            "linear-gradient(144deg,#ff7dafF, #5B42F3 40%,#FF8B6A)",
+
+          boxShadow: "#f09a5d 0 10px 20px -10px",
+          scale: 1.2,
+        }}
+        transition={{ type: "spring", stiffness: 500, damping: 5 }}
+        whileTap={{ scale: 0.9 }}
+        onClick={mainClickHandler}
+        className={classes.btn}
+      >
+        {!isStarted ? `Start` : `Continue`}
+      </motion.button>
+    </motion.div>
   );
 }

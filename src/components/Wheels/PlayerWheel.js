@@ -3,11 +3,18 @@ import WheelContext from "../../store/wheel-context";
 import Wheel from "../UI/Wheel";
 import classes from "./PlayerWheel.module.css";
 
+import uparrow from "../../assets/pngs/arrow-up.png";
+import downarrow from "../../assets/pngs/arrow-down.png";
+
+import { motion, AnimatePresence } from "framer-motion";
+
 export default function PlayerWheel(props) {
   const playerCtx = useContext(WheelContext);
 
   const modeData = props.data;
   const [mode, setMode] = useState(modeData[playerCtx.playerIndex]);
+
+  const [translate, setTranslate] = useState(0);
 
   useEffect(() => {
     setMode(modeData[playerCtx.playerIndex]);
@@ -20,6 +27,12 @@ export default function PlayerWheel(props) {
     if (playerCtx.playerIndex === 0) {
       playerCtx.setPlayerIndex(4);
     }
+
+    setTranslate(-2);
+
+    setTimeout(() => {
+      setTranslate(0);
+    }, 250);
   }
 
   function incHandler() {
@@ -29,24 +42,50 @@ export default function PlayerWheel(props) {
     if (playerCtx.playerIndex === 4) {
       playerCtx.setPlayerIndex(0);
     }
+    setTranslate(2);
+
+    setTimeout(() => {
+      setTranslate(0);
+    }, 250);
   }
 
   return (
     <Wheel>
-      <button
+      <motion.button
+        transition={{
+          type: "spring",
+          stiffness: 500,
+          damping: 5,
+          duration: 0.5,
+        }}
+        whileTap={{ scale: 1.5 }}
         onClick={decHandler}
         className={`${classes.btn} ${classes.incBtn}`}
       >
-        -
-      </button>
-      <img src={mode.logo} className={classes.images} />
+        <img className={classes.btnimage} src={uparrow} />
+      </motion.button>
+      <motion.img
+        src={mode.logo}
+        className={classes.images}
+        animate={{ translateY: `${translate}vh` }}
+        transition={{
+          duration: 0.2,
+        }}
+      />
       <p className={classes.content}>{mode.name}</p>
-      <button
+      <motion.button
+        transition={{
+          type: "spring",
+          stiffness: 500,
+          damping: 5,
+          duration: 0.5,
+        }}
+        whileTap={{ scale: 1.5 }}
         onClick={incHandler}
         className={`${classes.btn} ${classes.decBtn}`}
       >
-        +
-      </button>
+        <img className={classes.btnimage} src={downarrow} />
+      </motion.button>
     </Wheel>
   );
 }
