@@ -1,3 +1,5 @@
+# Rock Paper Scissors Lizard Spock Game (v1)
+
 A game inpsired from the rock-paper-scissor-lizard-spock game in the sitcom The Big Bang Theory! (https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock)
 
 ### How to play- 
@@ -5,4 +7,4 @@ A game inpsired from the rock-paper-scissor-lizard-spock game in the sitcom The 
 
 ## try it now- https://rpslsreact.netlify.app/
 
-Stack- ReactJS, Class based CSS, Framer Motion (version 1.0.0)
+Stack- ReactJS, Class based CSS, Framer Motion
