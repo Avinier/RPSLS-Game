@@ -1,4 +1,4 @@
-# Rock Paper Scissors Lizard Spock Game (v1)
+# Rock Paper Scissors Lizard Spock Game (v 1.0.0)
 
 A game inpsired from the rock-paper-scissor-lizard-spock game in the sitcom The Big Bang Theory! (https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock)
 
